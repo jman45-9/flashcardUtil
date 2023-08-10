@@ -4,6 +4,7 @@
 /// Headers
 
 #include <iostream>
+#include <fstream>
 #include <string>
 
 /// using declarations
@@ -15,5 +16,7 @@ class FlashCard {
         string back;
 
 };
+
+FlashCard *readSet(char *filename);
 
 #endif /* MAIN */
