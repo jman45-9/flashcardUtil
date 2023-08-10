@@ -10,7 +10,7 @@ FlashCard *readSet(char *filename)
 {
     std::ifstream setFile{filename};
     if (!setFile)
-    {
         std::cerr << "Failed to open set!\n";
-    }
+
+    
 }
