@@ -4,6 +4,7 @@
 /// Headers
 
 #include <iostream>
+#include <cstdlib>
 #include <fstream>
 #include <string>
 
@@ -14,6 +15,11 @@ class FlashCard {
     public:
         string front;
         string back;
+    FlashCard(string front, string back)
+    {
+        this->front = front;
+        this->back = back;
+    }
 
 };
 
