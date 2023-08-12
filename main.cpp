@@ -3,6 +3,9 @@
 
 int main()
 {
+    string foo;
+    string bar;
+    spiltFrontBack("Test::Bob", &foo, &bar);
 
     return 0;
 }
@@ -37,17 +40,20 @@ void spiltFrontBack(string cardInfo, string *frontText, string *backText)
     int splitMarker = -1;
     for(int iii = 0; cardInfo.length() >= iii; iii++)
     {
-        if (cardInfo[iii] == ':' && cardInfo[iii+1] == '::')
+        if (cardInfo[iii] == ':' && cardInfo[iii+1] == ':')
         {
-            
+            splitMarker = iii;
+            break;
         }
     }
 
     if (splitMarker == -1)
     {
-        std::cerr << "Please add a '::' between the front and back of" << cardInfo << '\n';
+        std::cerr << "Please add a '::' between the front and back of \"" 
+        << cardInfo << "\"\n";
         exit(1);
     }
+    std::cout << splitMarker << '\n';
 }
 
 

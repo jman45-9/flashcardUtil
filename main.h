@@ -20,7 +20,7 @@ struct FlashCard {
 
 
 FlashCard *readSet(char *filename);
-void spiltFrontBack(string cardInfo, string frontText, string backText);
+void spiltFrontBack(string cardInfo, string *frontText, string *backText);
 
 int countFileLines(char *filename);
 
