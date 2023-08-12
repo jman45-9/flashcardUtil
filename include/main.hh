@@ -1,5 +1,5 @@
-#ifndef FLASHCARD_MAIN_H_
-#define FLASHCARD_MAIN_H_
+#ifndef FLASHCARD_INCLUDE_MAIN_H_
+#define FLASHCARD_INCLUDE_MAIN_H_
 
 /// Headers
 
@@ -24,4 +24,4 @@ void spiltFrontBack(string cardInfo, string *frontText, string *backText);
 
 int countFileLines(char *filename);
 
-#endif // FLASHCARD_MAIN_H_
+#endif // FLASHCARD_INCLUDE_MAIN_H_

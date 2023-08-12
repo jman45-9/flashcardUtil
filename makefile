@@ -1,6 +1,7 @@
 CC = g++
 GDB = gdb
-SRCS := $(wildcard *.cpp)
+SRCSDIREC = src/
+SRCS := $(wildcard ${SRCSDIREC}*.cpp)
 
 compile:
 	@${CC} -o bin/flashcards ${SRCS}
