@@ -3,18 +3,21 @@
 
 int main()
 {
-    
+
     return 0;
 }
 
 FlashCard *readSet(char *filename)
 {
+    int cardsNum = countFileLines(filename);
+
     std::ifstream setFile{filename};
     if (!setFile) 
     {
         std::cerr << "Failed to open set!\n";
         return NULL;
     }
+
 }
 
 int countFileLines(char *filename)

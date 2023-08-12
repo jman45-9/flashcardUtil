@@ -9,21 +9,18 @@
 #include <string>
 
 /// using declarations
-using std::string;
-/// Classes
-class FlashCard {
-    public:
-        string front;
-        string back;
-    FlashCard(string front, string back)
-    {
-        this->front = front;
-        this->back = back;
-    }
 
+using std::string;
+/// Structs & Classes
+
+struct FlashCard {
+    string front;
+    string back;
 };
 
+
 FlashCard *readSet(char *filename);
+void spiltFrontBack(string cardInfo, string frontText, string backText);
 
 int countFileLines(char *filename);
 
