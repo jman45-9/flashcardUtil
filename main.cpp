@@ -18,7 +18,6 @@ FlashCard *readSet(char *filename)
         return NULL;
     }
 
-/* Saving for later
     FlashCard *setArray = (FlashCard *)(malloc(sizeof(FlashCard) * cardsNum));
     for (int iii = 0; cardsNum > iii; iii++)
     {
@@ -27,9 +26,13 @@ FlashCard *readSet(char *filename)
         string cardInfo;
 
         std::getline(fileForSet, cardInfo);
-        spiltFrontBack();
+        spiltFrontBack(cardInfo, &frontText, &backText);
+
+        FlashCard card {frontText, backText};
+        *(setArray + iii) = card;
     }
-    */
+
+    return setArray;
 }
 
 void spiltFrontBack(string cardInfo, string *frontText, string *backText)
