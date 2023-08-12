@@ -1,5 +1,5 @@
-#ifndef MAIN
-#define MAIN
+#ifndef FLASHCARD_MAIN_H_
+#define FLASHCARD_MAIN_H_
 
 /// Headers
 
@@ -25,4 +25,6 @@ class FlashCard {
 
 FlashCard *readSet(char *filename);
 
-#endif /* MAIN */
+int countFileLines(char *filename);
+
+#endif // FLASHCARD_MAIN_H_
