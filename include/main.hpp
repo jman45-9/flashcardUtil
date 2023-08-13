@@ -8,16 +8,10 @@
 #include <fstream>
 #include <string>
 
+#include "../include/structs.hpp"
 /// using declarations
 
 using std::string;
-/// Structs & Classes
-
-struct FlashCard {
-    string front;
-    string back;
-};
-
 
 FlashCard *readSet(char *filename);
 void spiltFrontBack(string cardInfo, string *frontText, string *backText);
