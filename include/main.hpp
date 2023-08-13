@@ -9,7 +9,7 @@
 #include <string>
 
 #include "structs.hpp"
-#include "flashcardSet.hpp"
+#include "FlashcardSet.hpp"
 /// using declarations
 
 using std::string;

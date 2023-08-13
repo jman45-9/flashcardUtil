@@ -3,10 +3,10 @@
 
 #include "structs.hpp"
 
-class flashcardSet 
+class FlashcardSet 
 {
     public:
-    
+
 };
 
 #endif // FLASHCARD_FLASHCARD_SET_H_
