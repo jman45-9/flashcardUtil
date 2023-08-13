@@ -3,7 +3,7 @@
 
 int main()
 {
-    
+
     return 0;
 }
 
@@ -53,7 +53,7 @@ void spiltFrontBack(string cardInfo, string *frontText, string *backText)
         << cardInfo << "\"\n";
         exit(1);
     }
-    
+        std::cout << "Hello World!\n";
     *frontText = cardInfo;
     frontText->erase(splitMarker, frontText->length());
     *backText = cardInfo;

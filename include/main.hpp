@@ -8,7 +8,8 @@
 #include <fstream>
 #include <string>
 
-#include "../include/structs.hpp"
+#include "structs.hpp"
+#include "flashcardSet.hpp"
 /// using declarations
 
 using std::string;
