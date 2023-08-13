@@ -3,11 +3,16 @@
 
 int main()
 {
+    FlashcardSet *cardSet = readSet("testSet.txt");
+
+    free (cardSet->setArray);
+    delete cardSet;
 
     return 0;
 }
 
-FlashCard *readSet(char *filename)
+// caller takes ownership of the object and set array
+FlashcardSet *readSet(char *filename)
 {
     int cardsNum = countFileLines(filename);
 
@@ -31,8 +36,9 @@ FlashCard *readSet(char *filename)
         FlashCard card {frontText, backText};
         *(setArray + iii) = card;
     }
+    FlashcardSet *cardSet = new FlashcardSet(cardsNum, setArray);
 
-    return setArray;
+    return cardSet;
 }
 
 void spiltFrontBack(string cardInfo, string *frontText, string *backText)
@@ -53,7 +59,6 @@ void spiltFrontBack(string cardInfo, string *frontText, string *backText)
         << cardInfo << "\"\n";
         exit(1);
     }
-        std::cout << "Hello World!\n";
     *frontText = cardInfo;
     frontText->erase(splitMarker, frontText->length());
     *backText = cardInfo;

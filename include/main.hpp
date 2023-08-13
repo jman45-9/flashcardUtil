@@ -14,7 +14,7 @@
 
 using std::string;
 
-FlashCard *readSet(char *filename);
+FlashcardSet *readSet(char *filename);
 void spiltFrontBack(string cardInfo, string *frontText, string *backText);
 
 int countFileLines(char *filename);
