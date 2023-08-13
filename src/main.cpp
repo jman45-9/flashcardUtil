@@ -5,9 +5,7 @@ int main()
 {
     FlashcardSet *cardSet = readSet("testSet.txt");
 
-    free (cardSet->setArray);
-    delete cardSet;
-
+    cardSet->delSet();
     return 0;
 }
 

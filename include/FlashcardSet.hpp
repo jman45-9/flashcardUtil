@@ -14,6 +14,7 @@ class FlashcardSet
 
     FlashcardSet(int numCards, FlashCard *setArray);
     void printCards();
+    void delSet();
 };
 
 #endif // FLASHCARD_FLASHCARD_SET_H_
