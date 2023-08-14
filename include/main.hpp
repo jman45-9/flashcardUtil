@@ -19,9 +19,12 @@ using std::string;
 
 /// Function declarations 
 
+bool chooseFunction(string userCommand);
+
 FlashcardSet *readSet(const char *filename);
 void spiltFrontBack(string cardInfo, string *frontText, string *backText);
 
 int countFileLines(const char *filename);
+
 
 #endif // FLASHCARD_INCLUDE_MAIN_H_

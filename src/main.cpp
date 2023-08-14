@@ -10,9 +10,27 @@ int main()
     Logger::logInit("logSheet.log");
     FlashcardSet *cardSet = readSet(userSet.c_str());
 
+    bool runCode = 1;
+    while (runCode)
+    {
+        string userCommand;
+        std::cin >> userCommand;
+        runCode = chooseFunction(userCommand);
+    }
+
     delete cardSet;
     Logger::closeLog();
     return 0;
+}
+
+bool chooseFunction(string userCommand)
+{
+
+    if (userCommand == "quit" || userCommand == "q")
+        return 0;
+
+    std::cout << "Please enter a valid command, use help for a list of valid commands\n";
+    return 1;
 }
 
 // caller takes ownership of the object and set array
