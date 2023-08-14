@@ -13,9 +13,10 @@ int main()
     bool runCode = 1;
     while (runCode)
     {
+        std::cout << "flashcardUtil> ";
         string userCommand;
         std::cin >> userCommand;
-        runCode = chooseFunction(userCommand);
+        runCode = chooseFunction(userCommand, cardSet);
     }
 
     delete cardSet;
@@ -23,9 +24,18 @@ int main()
     return 0;
 }
 
-bool chooseFunction(string userCommand)
+bool chooseFunction(string userCommand, FlashcardSet *cardSet)
 {
-
+    if (userCommand == "list" || userCommand == "l")
+    {
+        cardSet->printCards();
+        return 1;
+    }
+    if (userCommand == "help" || userCommand == "h")
+    {
+        CardFuncs::printHelp();
+        return 1;
+    }
     if (userCommand == "quit" || userCommand == "q")
         return 0;
 

@@ -12,6 +12,7 @@ debug:
 
 test:
 	@${CC} -o bin/flashcards ${SRCS}
+	@echo "start code"
 	@bin/flashcards
 
 clean:

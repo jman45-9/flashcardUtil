@@ -12,6 +12,7 @@
 #include "structs.hpp"
 #include "FlashcardSet.hpp"
 #include "logger.hpp"
+#include "features.hpp"
 
 /// using declarations
 
@@ -19,7 +20,7 @@ using std::string;
 
 /// Function declarations 
 
-bool chooseFunction(string userCommand);
+bool chooseFunction(string userCommand, FlashcardSet *cardSet);
 
 FlashcardSet *readSet(const char *filename);
 void spiltFrontBack(string cardInfo, string *frontText, string *backText);
