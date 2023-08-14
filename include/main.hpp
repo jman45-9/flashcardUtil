@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <string>
+#include <cassert>
 
 #include "structs.hpp"
 #include "FlashcardSet.hpp"
@@ -18,9 +19,9 @@ using std::string;
 
 /// Function declarations 
 
-FlashcardSet *readSet(char *filename);
+FlashcardSet *readSet(const char *filename);
 void spiltFrontBack(string cardInfo, string *frontText, string *backText);
 
-int countFileLines(char *filename);
+int countFileLines(const char *filename);
 
 #endif // FLASHCARD_INCLUDE_MAIN_H_

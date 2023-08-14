@@ -3,8 +3,12 @@
 
 int main()
 {
+    string userSet;
+    std::cout << "Please enter the file name for your set(MUST BE PLAIN TEXT):";
+    std::cin >> userSet;
+
     Logger::logInit("logSheet.log");
-    FlashcardSet *cardSet = readSet("testSet.txt");
+    FlashcardSet *cardSet = readSet(userSet.c_str());
 
     delete cardSet;
     Logger::closeLog();
@@ -12,7 +16,7 @@ int main()
 }
 
 // caller takes ownership of the object and set array
-FlashcardSet *readSet(char *filename)
+FlashcardSet *readSet(const char *filename)
 {
     int cardsNum = countFileLines(filename);
 
@@ -66,7 +70,7 @@ void spiltFrontBack(string cardInfo, string *frontText, string *backText)
 }
 
 
-int countFileLines(char *filename)
+int countFileLines(const char *filename)
 {
     std::ifstream file{filename};
     if (!file)
