@@ -6,7 +6,7 @@ int main()
     Logger::logInit("logSheet.log");
     FlashcardSet *cardSet = readSet("testSet.txt");
 
-    cardSet->delSet();
+    delete cardSet;
     Logger::closeLog();
     return 0;
 }

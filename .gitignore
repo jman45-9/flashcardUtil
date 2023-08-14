@@ -1,3 +1,4 @@
 bin/
+.vscode/
 testSet.txt
 *.log

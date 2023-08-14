@@ -13,8 +13,8 @@ class FlashcardSet
         int numCards;
 
     FlashcardSet(int numCards, FlashCard *setArray);
+    ~FlashcardSet();
     void printCards();
-    void delSet();
 };
 
 #endif // FLASHCARD_FLASHCARD_SET_H_
