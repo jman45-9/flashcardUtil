@@ -14,6 +14,6 @@ FlashcardSet::~FlashcardSet()
 void FlashcardSet::printCards()
 {
     for(int iii = 0; this->numCards > iii; iii++)
-        std::cout << ((this->setArray)+iii)->front << ":::" << 
+        std::cout << iii << ") " << ((this->setArray)+iii)->front << ":::" << 
         ((this->setArray)+iii)->back << "\n";
 }

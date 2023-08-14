@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "logger.hpp"
+
 namespace CardFuncs
 {
     void printHelp();
