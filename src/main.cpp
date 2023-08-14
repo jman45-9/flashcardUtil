@@ -3,9 +3,11 @@
 
 int main()
 {
+    Logger::logInit("logSheet.log");
     FlashcardSet *cardSet = readSet("testSet.txt");
 
     cardSet->delSet();
+    Logger::closeLog();
     return 0;
 }
 

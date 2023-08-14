@@ -10,9 +10,13 @@
 
 #include "structs.hpp"
 #include "FlashcardSet.hpp"
+#include "logger.hpp"
+
 /// using declarations
 
 using std::string;
+
+/// Function declarations 
 
 FlashcardSet *readSet(char *filename);
 void spiltFrontBack(string cardInfo, string *frontText, string *backText);
