@@ -15,7 +15,7 @@ using std::string;
 
 /// Function declarations 
 
-bool chooseFunction(string userCommand, FlashcardSet *cardSet);
+bool chooseFunction(string userCommand, FlashcardSet *cardSet, lastCard *lastChoosenCard);
 
 FlashcardSet *readSet(const char *filename);
 void spiltFrontBack(string cardInfo, string *frontText, string *backText);

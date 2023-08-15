@@ -18,7 +18,7 @@ namespace CardFuncs
             return CONTINUE;
         }
 
-        bool chooseCard(FlashcardSet *cardSet)
+        bool chooseCard(FlashcardSet *cardSet, lastCard *lastChoosenCard)
         {
             Logger::logString("chooseCard start");
             int cardNum;
@@ -35,15 +35,19 @@ namespace CardFuncs
                 Logger::logString("user entered a invalid card number");
                 return CONTINUE;
             }
+            lastChoosenCard->card = *(cardSet->setArray + cardNum);
+            Logger::logString("Saved last card");
 
             if (cardSide == "back" || cardSide == "b")
             {
                 std::cout << (cardSet->setArray + cardNum)->back << '\n';
+                lastChoosenCard->lastSide = 'b';
                 return CONTINUE;
             } 
             else 
             {
                 std::cout << (cardSet->setArray + cardNum)->front << '\n';
+                lastChoosenCard->lastSide = 'f';
                 return CONTINUE;
             }
         }

@@ -14,7 +14,7 @@ int main()
     FlashcardSet *cardSet = readSet(userSet.c_str());
 
     bool runCode = 1;
-    
+    lastCard lastChoosenCard;
     while (runCode)
     {
         std::cout << "flashcardUtil> ";
@@ -30,11 +30,11 @@ int main()
     return 0;
 }
 
-bool chooseFunction(string userCommand, FlashcardSet *cardSet)
+bool chooseFunction(string userCommand, FlashcardSet *cardSet, lastCard *lastChoosenCard)
 {
     Logger::logString("user used command " + userCommand);
     if (userCommand == "choose" || userCommand == "c")
-        return CardFuncs::chooseCard(cardSet);
+        return CardFuncs::chooseCard(cardSet, lastChoosenCard);
     if (userCommand == "list" || userCommand == "l")
         return cardSet->printCards();
     if (userCommand == "help" || userCommand == "h")

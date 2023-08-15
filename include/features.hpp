@@ -4,11 +4,11 @@
 #include "macrosStdLibs.hpp"
 #include "logger.hpp"
 #include "classHeaders.hpp"
-
+#include "structs.hpp"
 namespace CardFuncs
 {
     bool printHelp();
-    bool chooseCard(FlashcardSet *cardSet);
+    bool chooseCard(FlashcardSet *cardSet, lastCard *lastChosenCard);
 }
 
 #endif // FLASHCARD_INCLUDE_FEATURES_H_

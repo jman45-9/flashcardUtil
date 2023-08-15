@@ -10,6 +10,7 @@ struct FlashCard {
 
 struct lastCard {
     FlashCard card;
+    // f or b
     char lastSide;
 };
 #endif // FLASHCARD_INCLUDE_STRUCTS_H_
