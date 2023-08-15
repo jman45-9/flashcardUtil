@@ -3,11 +3,13 @@
 
 int main()
 {
+    Logger::logInit("logSheet.log");
+    Logger::logString("began program");
+
     string userSet;
     std::cout << "Please enter the file name for your set(MUST BE PLAIN TEXT):";
     std::cin >> userSet;
 
-    Logger::logInit("logSheet.log");
     FlashcardSet *cardSet = readSet(userSet.c_str());
 
     bool runCode = 1;
@@ -18,14 +20,17 @@ int main()
         std::cin >> userCommand;
         runCode = chooseFunction(userCommand, cardSet);
     }
+    Logger::logString("user quit program");
 
     delete cardSet;
+    Logger::logString("ended program");
     Logger::closeLog();
     return 0;
 }
 
 bool chooseFunction(string userCommand, FlashcardSet *cardSet)
 {
+    Logger::logString("user used command " + userCommand);
     if (userCommand == "list" || userCommand == "l")
         return cardSet->printCards();
     if (userCommand == "help" || userCommand == "h")
@@ -45,7 +50,7 @@ FlashcardSet *readSet(const char *filename)
     std::ifstream fileForSet{filename};
     if (!fileForSet) 
     {
-        std::cerr << "Failed to open set!\n";
+        Logger::logString("Failed to open set!");
         exit(1);
     }
 
@@ -64,6 +69,7 @@ FlashcardSet *readSet(const char *filename)
     }
     FlashcardSet *cardSet = new FlashcardSet(cardsNum, setArray);
 
+    Logger::logString("set read successfully");
     return cardSet;
 }
 
@@ -83,6 +89,7 @@ void spiltFrontBack(string cardInfo, string *frontText, string *backText)
     {
         std::cerr << "Please add a '::' between the front and back of \"" 
         << cardInfo << "\"\n";
+        Logger::logString("User made syntax error");
         exit(1);
     }
     *frontText = cardInfo;

@@ -3,6 +3,7 @@
 
 #include "macrosStdLibs.hpp"
 #include "structs.hpp"
+#include "logger.hpp"
 
 class FlashcardSet 
 {
