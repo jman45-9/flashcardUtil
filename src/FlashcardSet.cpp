@@ -11,9 +11,10 @@ FlashcardSet::~FlashcardSet()
     free(this->setArray);
 }
 
-void FlashcardSet::printCards()
+bool FlashcardSet::printCards()
 {
     for(int iii = 0; this->numCards > iii; iii++)
         std::cout << iii << ") " << ((this->setArray)+iii)->front << ":::" << 
         ((this->setArray)+iii)->back << "\n";
+    return CONTINUE;
 }

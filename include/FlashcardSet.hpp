@@ -1,9 +1,7 @@
 #ifndef FLASHCARD_FLASHCARD_SET_H_
 #define FLASHCARD_FLASHCARD_SET_H_
 
-#include <iostream>
-#include <string>
-
+#include "macrosStdLibs.hpp"
 #include "structs.hpp"
 
 class FlashcardSet 
@@ -14,7 +12,7 @@ class FlashcardSet
 
     FlashcardSet(int numCards, FlashCard *setArray);
     ~FlashcardSet();
-    void printCards();
+    bool printCards();
 };
 
 #endif // FLASHCARD_FLASHCARD_SET_H_

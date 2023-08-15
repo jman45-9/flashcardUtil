@@ -1,14 +1,13 @@
 #ifndef FLASHCARD_INCLUDE_FEATURES_H_
 #define FLASHCARD_INCLUDE_FEATURES_H_
 
-#include <iostream>
-
+#include "macrosStdLibs.hpp"
 #include "logger.hpp"
 #include "classHeaders.hpp"
 
 namespace CardFuncs
 {
-    int printHelp();
+    bool printHelp();
 }
 
 #endif // FLASHCARD_INCLUDE_FEATURES_H_

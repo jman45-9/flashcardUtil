@@ -27,20 +27,14 @@ int main()
 bool chooseFunction(string userCommand, FlashcardSet *cardSet)
 {
     if (userCommand == "list" || userCommand == "l")
-    {
-        cardSet->printCards();
-        return 1;
-    }
+        return cardSet->printCards();
     if (userCommand == "help" || userCommand == "h")
-    {
-        CardFuncs::printHelp();
-        return 1;
-    }
+        return CardFuncs::printHelp();
     if (userCommand == "quit" || userCommand == "q")
-        return 0;
+        return QUIT;
 
     std::cout << "Please enter a valid command, use help for a list of valid commands\n";
-    return 1;
+    return CONTINUE;
 }
 
 // caller takes ownership of the object and set array
@@ -52,7 +46,7 @@ FlashcardSet *readSet(const char *filename)
     if (!fileForSet) 
     {
         std::cerr << "Failed to open set!\n";
-        return NULL;
+        exit(1);
     }
 
     FlashCard *setArray = (FlashCard *)(malloc(sizeof(FlashCard) * cardsNum));
