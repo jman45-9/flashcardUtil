@@ -9,6 +9,7 @@ int main()
     string userSet;
     std::cout << "Please enter the file name for your set(MUST BE PLAIN TEXT):";
     std::cin >> userSet;
+    Logger::logString("user set filename: " + userSet);
 
     FlashcardSet *cardSet = readSet(userSet.c_str());
 

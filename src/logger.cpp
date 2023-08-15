@@ -25,6 +25,7 @@ namespace Logger
 
         const char *cLogMessage = logMessage.c_str();
         fprintf(Logger::logSheetOut,"%s\n" ,cLogMessage);
+        fflush(Logger::logSheetOut);
 
         return 1;
     }
