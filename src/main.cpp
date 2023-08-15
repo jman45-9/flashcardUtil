@@ -65,6 +65,8 @@ FlashcardSet *readSet(const char *filename)
         string cardInfo;
 
         std::getline(fileForSet, cardInfo);
+        if (cardInfo.length() == 0 || cardInfo[0] == '#')
+            continue;
         spiltFrontBack(cardInfo, &frontText, &backText);
 
         FlashCard card {frontText, backText};
