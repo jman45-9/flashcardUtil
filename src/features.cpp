@@ -26,10 +26,13 @@ namespace CardFuncs
 
             std::cin >> cardNum;
             std::cin >> cardSide;
+            Logger::logString("user asked for card " + std::to_string(cardNum) + 
+                " side " + cardSide);
 
             if (cardNum >= cardSet->numCards)
             {
                 std::cout << "Please enter a valid card number.\n";
+                Logger::logString("user entered a invalid card number");
                 return CONTINUE;
             }
 
