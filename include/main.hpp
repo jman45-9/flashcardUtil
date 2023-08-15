@@ -3,14 +3,9 @@
 
 /// Headers
 
-#include <iostream>
-#include <cstdlib>
-#include <fstream>
-#include <string>
-#include <cassert>
-
+#include "macrosStdLibs.hpp"
 #include "structs.hpp"
-#include "FlashcardSet.hpp"
+#include "classHeaders.hpp"
 #include "logger.hpp"
 #include "features.hpp"
 

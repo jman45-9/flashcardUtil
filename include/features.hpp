@@ -4,10 +4,11 @@
 #include <iostream>
 
 #include "logger.hpp"
+#include "classHeaders.hpp"
 
 namespace CardFuncs
 {
-    void printHelp();
+    int printHelp();
 }
 
 #endif // FLASHCARD_INCLUDE_FEATURES_H_

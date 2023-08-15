@@ -2,7 +2,7 @@
 
 namespace CardFuncs
 {
-        void printHelp()
+        int printHelp()
         {
             std::cout << "(c)hoose: takes argument of the card number and side "
                 << "and prints that. Syntax is choose <cardNumber> <(f)ront or" 
@@ -11,6 +11,6 @@ namespace CardFuncs
             std::cout << "(l)ist: lists current flashcards\n";
             std::cout << "(q)uit: quits program\n";
 
-            
+            return 
         }
 }
