@@ -32,6 +32,8 @@ int main()
 bool chooseFunction(string userCommand, FlashcardSet *cardSet)
 {
     Logger::logString("user used command " + userCommand);
+    if (userCommand == "choose" || userCommand == "c")
+        return CardFuncs::chooseCard(cardSet);
     if (userCommand == "list" || userCommand == "l")
         return cardSet->printCards();
     if (userCommand == "help" || userCommand == "h")
