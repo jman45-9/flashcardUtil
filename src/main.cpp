@@ -14,6 +14,7 @@ int main()
     FlashcardSet *cardSet = readSet(userSet.c_str());
 
     bool runCode = 1;
+    
     while (runCode)
     {
         std::cout << "flashcardUtil> ";

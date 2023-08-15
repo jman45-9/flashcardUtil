@@ -8,4 +8,8 @@ struct FlashCard {
     std::string back;
 };
 
+struct lastCard {
+    FlashCard card;
+    char lastSide;
+};
 #endif // FLASHCARD_INCLUDE_STRUCTS_H_
