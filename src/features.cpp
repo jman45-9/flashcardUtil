@@ -51,4 +51,20 @@ namespace CardFuncs
                 return CONTINUE;
             }
         }
+
+        bool flipCard(lastCard *lastChoosenCard)
+        {
+            if (lastChoosenCard->lastSide == 'f')
+            {
+                std::cout << lastChoosenCard->card.back << '\n';
+                lastChoosenCard->lastSide = 'b';
+            }
+            else
+            {
+                std::cout << lastChoosenCard->card.front << '\n';
+                lastChoosenCard->lastSide = 'f';
+            }
+            Logger::logString("user flipped card");
+            return CONTINUE;
+        }
 }

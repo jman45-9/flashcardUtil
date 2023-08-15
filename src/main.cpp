@@ -20,7 +20,7 @@ int main()
         std::cout << "flashcardUtil> ";
         string userCommand;
         std::cin >> userCommand;
-        runCode = chooseFunction(userCommand, cardSet);
+        runCode = chooseFunction(userCommand, cardSet, &lastChoosenCard);
     }
     Logger::logString("user quit program");
 
@@ -35,6 +35,8 @@ bool chooseFunction(string userCommand, FlashcardSet *cardSet, lastCard *lastCho
     Logger::logString("user used command " + userCommand);
     if (userCommand == "choose" || userCommand == "c")
         return CardFuncs::chooseCard(cardSet, lastChoosenCard);
+    if (userCommand == "flip" || userCommand == "f")
+        return CardFuncs::flipCard(lastChoosenCard);
     if (userCommand == "list" || userCommand == "l")
         return cardSet->printCards();
     if (userCommand == "help" || userCommand == "h")
@@ -67,7 +69,10 @@ FlashcardSet *readSet(const char *filename)
 
         std::getline(fileForSet, cardInfo);
         if (cardInfo.length() == 0 || cardInfo[0] == '#')
+        {
+            iii--;
             continue;
+        }
         spiltFrontBack(cardInfo, &frontText, &backText);
 
         FlashCard card {frontText, backText};
@@ -119,7 +124,8 @@ int countFileLines(const char *filename)
     {
         string trash;
         std::getline(file, trash);
-        lines++;
+        if (!(trash.length() == 0 || trash[0] == '#'))
+            lines++;
     }
     return --lines;
 }

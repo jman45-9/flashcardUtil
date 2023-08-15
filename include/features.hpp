@@ -9,6 +9,7 @@ namespace CardFuncs
 {
     bool printHelp();
     bool chooseCard(FlashcardSet *cardSet, lastCard *lastChosenCard);
+    bool flipCard(lastCard *lastChoosenCard);
 }
 
 #endif // FLASHCARD_INCLUDE_FEATURES_H_
